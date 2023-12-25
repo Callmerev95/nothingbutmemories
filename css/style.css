@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;1,900&display=swap');
+*{
+    font-family: 'Poppins',cursive;
+}
+body{
+    color: rgb(248, 225, 225);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url(bg5.jpg);
+    background-size: cover;
+}
+.greetings{
+    font-size: 6rem;
+    font-weight: 900;
+}
+.greetings > span{
+    animation: glow 2.7s ease-in-out infinite;
+}
+@keyframes glow{
+    0%, 100%{
+        color: #ffffff;
+        text-shadow: 0 0 12px #f802cf, 0 0 50px #f802cf, 0 0 100px #f802cf;
+    }
+    10%, 90%{
+        color: #535151;
+        text-shadow: none;
+    }
+}
+.greetings > span:nth-child(2){
+    animation-delay: .2s ;
+}
+.greetings > span:nth-child(3){
+    animation-delay: .4s ;
+}
+.greetings > span:nth-child(4){
+    animation-delay: .6s;
+}
+.greetings > span:nth-child(5){
+    animation-delay: .8s;
+}
+
+.description{
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: rgb(104, 103, 103);
+    border-radius: 15px;
+    transition-duration: 0.4s;
+}
+
+button:hover{
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+}
+
+.button a{
+    text-decoration:none;
+    font-size: 15px;
+    color: #ffffff;
+    background-color: rgb(104, 103, 103);
+    transition-duration: 0.4s;
+}
+.button:hover a{
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+}
+
+@media screen and (max-width:574px){
+    .greetings{
+        display: block;
+        font-size: 3rem;
+        font-weight: 500;
+        text-align: center;
+    }
+    .description{
+        font-size: 1rem;
+    }
+    
+    .button a{
+        font-size: .5rem;
+    }
+}
